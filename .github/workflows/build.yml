@@ -15,26 +15,21 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-    - name: Accept Android SDK licenses
+    - name: Accept licenses and setup SDK
       run: |
-        yes | sdkmanager --licenses || true
-        sdkmanager "platform-tools" "platforms;android-34" "build-tools;34.0.0"
+        mkdir -p $ANDROID_HOME/licenses
+        echo "24333f8a63b6825ea9c5514f83c2829b004d1fee" > $ANDROID_HOME/licenses/android-sdk-license
+        echo "84831b9409646a918e30573bab4c9c91346d8abd" >> $ANDROID_HOME/licenses/android-sdk-license
 
     - name: Make gradlew executable
       run: chmod +x gradlew
 
-    - name: Build Release APK
-      run: ./gradlew assembleRelease --no-daemon
-
-    - name: Sign APK
-      run: |
-        keytool -genkey -v -keystore release.keystore -alias mykey -keyalg RSA -keysize 2048 -validity 10000 -storepass android123 -keypass android123 -dname "CN=App, OU=App, O=Company, L=City, S=State, C=US"
-        jarsigner -verbose -sigalg SHA256withRSA -digestalg SHA-256 -keystore release.keystore -storepass android123 -keypass android123 app/build/outputs/apk/release/app-release-unsigned.apk mykey
-        cp app/build/outputs/apk/release/app-release-unsigned.apk app-release.apk
+    - name: Build APK
+      run: ./gradlew assembleDebug --no-daemon
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
       with:
         name: app-release
-        path: app-release.apk
-        retention-days: 1
+        path: app/build/outputs/apk/debug/app-debug.apk
+        retention-days: 7
