@@ -5,7 +5,7 @@ android {
     buildToolsVersion "34.0.0"
 
     defaultConfig {
-        applicationId "com.porno.app"
+        applicationId "com.virus.app"
         minSdkVersion 21
         targetSdkVersion 34
         versionCode 1
