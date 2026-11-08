@@ -1,13 +1,11 @@
 name: Build APK
 
 on:
-  push:
-    branches: [ main ]
   workflow_dispatch:
 
 jobs:
   build:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
 
@@ -17,12 +15,10 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-    - name: Setup Android SDK
-      uses: android-actions/setup-android@v3
-      with:
-        accept-android-sdk-licenses: true
-      with:
-        accept-android-sdk-licenses: true
+    - name: Accept Android SDK licenses
+      run: |
+        yes | sdkmanager --licenses || true
+        sdkmanager "platform-tools" "platforms;android-34" "build-tools;34.0.0"
 
     - name: Make gradlew executable
       run: chmod +x gradlew
@@ -32,8 +28,8 @@ jobs:
 
     - name: Sign APK
       run: |
-        keytool -genkey -v -keystore release.keystore -alias mykey -keyalg RSA           -keysize 2048 -validity 10000 -storepass android123 -keypass android123           -dname "CN=App, OU=App, O=Company, L=City, S=State, C=US"
-        jarsigner -verbose -sigalg SHA256withRSA -digestalg SHA-256           -keystore release.keystore -storepass android123 -keypass android123           app/build/outputs/apk/release/app-release-unsigned.apk mykey
+        keytool -genkey -v -keystore release.keystore -alias mykey -keyalg RSA -keysize 2048 -validity 10000 -storepass android123 -keypass android123 -dname "CN=App, OU=App, O=Company, L=City, S=State, C=US"
+        jarsigner -verbose -sigalg SHA256withRSA -digestalg SHA-256 -keystore release.keystore -storepass android123 -keypass android123 app/build/outputs/apk/release/app-release-unsigned.apk mykey
         cp app/build/outputs/apk/release/app-release-unsigned.apk app-release.apk
 
     - name: Upload APK
