@@ -15,8 +15,8 @@ jobs:
     - name: Build
       run: |
         export ANDROID_HOME=/usr/local/lib/android/sdk
-        yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses 2>/dev/null || true
-        $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager "platforms;android-34" "build-tools;34.0.0" 2>/dev/null
+        yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses || true
+        yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager "platforms;android-34" "build-tools;34.0.0" || true
         chmod +x gradlew
         ./gradlew assembleRelease --no-daemon -Dorg.gradle.jvmargs=-Xmx1g
     - uses: actions/upload-artifact@v4
