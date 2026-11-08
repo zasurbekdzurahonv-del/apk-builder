@@ -1,0 +1,3 @@
+-keep class com.template.app.** { *; }
+-keepattributes *Annotation*
+-dontwarn okhttp3.**
